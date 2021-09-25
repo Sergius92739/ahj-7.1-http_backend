@@ -4,6 +4,7 @@ const TicketFull = require("./TicketFull");
 class TicketController {
   constructor(data) {
     this.data = data;
+    this.formatter = null;
   }
 
   getAllTickets() {
@@ -29,9 +30,21 @@ class TicketController {
       ticket.name = name;
       ticket.description = description;
       ticket.status = status;
-      ticket.created = new Date().toLocaleString();
+      ticket.created = this.getFormatDate();
       return ticket
     }
+  }
+
+  getFormatDate() {
+    this.formatter = new Intl.DateTimeFormat("ru", {
+      timeZone: "Europe/Moscow",
+      day: "numeric",
+      year: "numeric",
+      month: "numeric",
+      hour: "numeric",
+      minute: "numeric"
+    });
+    return this.formatter.format(new Date());
   }
 
   deleteTicket(id) {
