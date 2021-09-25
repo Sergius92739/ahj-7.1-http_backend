@@ -113,6 +113,7 @@ exports.start = async () => {
   try {
     app.listen(port, () => {
       console.log(`The server is running on port ${port}`);
+      console.log('Heroku:', 'https://ahj-7-1helpdesk.herokuapp.com/');
     })
   }
   catch (err) {
