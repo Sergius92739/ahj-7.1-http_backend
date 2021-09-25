@@ -29,6 +29,7 @@ class TicketController {
       ticket.name = name;
       ticket.description = description;
       ticket.status = status;
+      ticket.created = new Date().toLocaleString();
       return ticket
     }
   }
