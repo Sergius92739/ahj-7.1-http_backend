@@ -25,6 +25,7 @@ class TicketController {
     this.data.push(ticket);
     return ticket;
   }
+  
   editTicket(id, name, description, status) {
     if (this.getTicketById(id)) {
       const ticket = this.getTicketById(id);
@@ -35,8 +36,6 @@ class TicketController {
       return ticket
     }
   }
-
-  
 
   deleteTicket(id) {
     if (this.getTicketById(id)) {
