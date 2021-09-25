@@ -1,5 +1,6 @@
 const Ticket = require("./Ticket");
 const TicketFull = require("./TicketFull");
+const Formatter = require("./getDate");
 
 class TicketController {
   constructor(data) {
@@ -30,22 +31,12 @@ class TicketController {
       ticket.name = name;
       ticket.description = description;
       ticket.status = status;
-      ticket.created = this.getFormatDate();
+      ticket.created = Formatter.getDate();
       return ticket
     }
   }
 
-  getFormatDate() {
-    this.formatter = new Intl.DateTimeFormat("ru", {
-      timeZone: "Europe/Moscow",
-      day: "numeric",
-      year: "numeric",
-      month: "numeric",
-      hour: "numeric",
-      minute: "numeric"
-    });
-    return this.formatter.format(new Date());
-  }
+  
 
   deleteTicket(id) {
     if (this.getTicketById(id)) {
