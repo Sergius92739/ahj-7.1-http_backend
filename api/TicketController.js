@@ -9,8 +9,7 @@ class TicketController {
   }
 
   getAllTickets() {
-    const short = this.data.map((e) => new Ticket(e));
-    return short;
+    return this.data;
   }
 
   getTicketById(id) {
