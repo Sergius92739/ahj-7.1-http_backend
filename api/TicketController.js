@@ -23,7 +23,7 @@ class TicketController {
   createTicket(name, description) {
     const ticket = new TicketFull(name, description)
     this.data.push(ticket);
-    return ticket;
+    return this.data;
   }
   
   editTicket(id, name, description, status) {
