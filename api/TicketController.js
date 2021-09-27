@@ -9,7 +9,8 @@ class TicketController {
   }
 
   getAllTickets() {
-    return this.data;
+    const short = this.data.map((e) => new Ticket(e))
+    return short;
   }
 
   getTicketById(id) {
@@ -22,7 +23,7 @@ class TicketController {
   createTicket(name, description) {
     const ticket = new TicketFull(name, description)
     this.data.push(ticket);
-    return this.data;
+    return this.getAllTickets()
   }
   
   editTicket(id, name, description, status) {
@@ -32,7 +33,7 @@ class TicketController {
       ticket.description = description;
       ticket.status = status;
       ticket.created = Formatter.getDate();
-      return ticket
+      return this.data
     }
   }
 
@@ -40,7 +41,7 @@ class TicketController {
     if (this.getTicketById(id)) {
       const index = this.data.findIndex((e) => e.id === id);
       this.data.splice(index, 1);
-      return true;
+      return this.data;
     }
   }
 }
