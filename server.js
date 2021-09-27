@@ -68,6 +68,7 @@ app.use(async (ctx) => {
       return;
     case 'createTicket':
       try {
+        console.log(JSON.parse(ctx.request.body))
         const { name, description } = JSON.parse(ctx.request.body);
         const result = ticketCtlr.createTicket(name, description);
         ctx.response.body = result;
@@ -80,6 +81,7 @@ app.use(async (ctx) => {
       return;
     case 'editTicket':
       try {
+        console.log(JSON.parse(ctx.request.body))
         const { id, name, description, status } = JSON.parse(ctx.request.body);
         const result = ticketCtlr.editTicket(id, name, description, status);
         ctx.response.body = result;
