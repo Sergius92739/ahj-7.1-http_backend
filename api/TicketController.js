@@ -41,7 +41,7 @@ class TicketController {
       ticket.name = name;
       ticket.description = description;
       ticket.created = Formatter.getDate();
-      return this.data
+      return this.getAllTickets();
     }
   }
 
