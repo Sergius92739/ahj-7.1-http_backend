@@ -35,12 +35,11 @@ class TicketController {
     return this.getAllTickets()
   }
   
-  editTicket(id, name, description, status) {
+  editTicket(id, name, description) {
     if (this.getTicketById(id)) {
       const ticket = this.getTicketById(id);
       ticket.name = name;
       ticket.description = description;
-      ticket.status = status;
       ticket.created = Formatter.getDate();
       return this.data
     }

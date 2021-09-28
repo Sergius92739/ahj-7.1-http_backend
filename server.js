@@ -80,8 +80,8 @@ app.use(async (ctx) => {
       return;
     case 'editTicket':
       try {
-        const { id, name, description, status } = ctx.request.body;
-        const result = ticketCtlr.editTicket(id, name, description, status);
+        const { id, name, description } = ctx.request.body;
+        const result = ticketCtlr.editTicket(id, name, description);
         ctx.response.body = result;
       }
       catch (err) {
