@@ -80,8 +80,7 @@ app.use(async (ctx) => {
       return;
     case 'editTicket':
       try {
-        console.log(JSON.parse(ctx.request.body))
-        const { id, name, description, status } = JSON.parse(ctx.request.body);
+        const { id, name, description, status } = ctx.request.body;
         const result = ticketCtlr.editTicket(id, name, description, status);
         ctx.response.body = result;
       }
@@ -94,7 +93,7 @@ app.use(async (ctx) => {
     case 'deleteTicket':
       try {
         const result = ticketCtlr.deleteTicket(id);
-        ctx.response.body = { success: result };
+        ctx.response.body = result;
       }
       catch (err) {
         console.error(err);
@@ -102,7 +101,17 @@ app.use(async (ctx) => {
         ctx.response.body = err.message;
       }
       return;
-
+      case 'changeStatus':
+        try {
+          const result = ticketCtlr.changeStatus(id);
+          ctx.response.body = result;
+        }
+        catch (err) {
+          console.error(err);
+          ctx.status = 400;
+          ctx.response.body = `${err.message}. Method "changeStatus"`;
+        }
+        return;
     default:
       ctx.response.body = `Method "${method}" is not known.`;
       ctx.response.status = 404;

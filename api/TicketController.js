@@ -20,6 +20,15 @@ class TicketController {
     throw new Error('Invalid ID');
   }
 
+  changeStatus(id) {
+    if (this.getTicketById(id)) {
+      const ticket = this.getTicketById(id);
+      ticket.status = !ticket.status;
+      return { success: true };
+    }
+    return { success: false };
+  }
+
   createTicket(name, description) {
     const ticket = new TicketFull(name, description)
     this.data.push(ticket);
@@ -41,7 +50,7 @@ class TicketController {
     if (this.getTicketById(id)) {
       const index = this.data.findIndex((e) => e.id === id);
       this.data.splice(index, 1);
-      return this.data;
+      return this.getAllTickets();
     }
   }
 }
