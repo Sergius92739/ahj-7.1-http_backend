@@ -5,7 +5,7 @@ class TicketFull {
   constructor(name, description ) {
     this.id = uuidv4();
     this.name = name;
-    this.description = description;
+    this.description = description || '';
     this.status = false;
     this.created = getDate();
   }
