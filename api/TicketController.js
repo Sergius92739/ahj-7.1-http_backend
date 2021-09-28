@@ -5,7 +5,6 @@ const Formatter = require("./getDate");
 class TicketController {
   constructor(data) {
     this.data = data;
-    this.formatter = null;
   }
 
   getAllTickets() {
