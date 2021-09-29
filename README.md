@@ -1,6 +1,8 @@
 ### HelpDesk
 
-#### Link to Heroku: https://ahj-7-1helpdesk.herokuapp.com/
+#### Heroku: https://ahj-7-1helpdesk.herokuapp.com/
+
+#### Github-pages: https://sergius92739.github.io/ahj-7.2-http_frontend/
 
 #### Легенда
 
