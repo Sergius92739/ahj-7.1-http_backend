@@ -1,8 +1,10 @@
 ### HelpDesk
 
-#### Heroku: https://ahj-7-1helpdesk.herokuapp.com/
+#### Server: <a href="https://ahj-7-1helpdesk.herokuapp.com/">Heroku</a>
 
-#### Github-pages: https://sergius92739.github.io/ahj-7.2-http_frontend/
+#### Deployment: <a href="https://sergius92739.github.io/ahj-7.2-http_frontend/">Github Pages</a>
+
+#### Frontend: <a href="https://github.com/Sergius92739/ahj-7.2-http_frontend">repository</a>
 
 #### Легенда
 
