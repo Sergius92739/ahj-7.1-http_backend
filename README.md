@@ -1,6 +1,6 @@
 ### HelpDesk
 
-#### Server: <a href="https://ahj-7-1helpdesk.herokuapp.com/">Heroku</a>
+#### Server: <a href="https://ahj-7-1-http-sergius.herokuapp.com/">Heroku</a>
 
 #### Deployment: <a href="https://sergius92739.github.io/ahj-7.2-http_frontend/">Github Pages</a>
 
