@@ -123,7 +123,7 @@ exports.start = async () => {
   try {
     app.listen(port, () => {
       console.log(`The server is running on port ${port}`);
-      console.log('Heroku:', 'https://ahj-7-1helpdesk.herokuapp.com/');
+      console.log('АМВЕРА:', 'https://ahj-7-1-http-backend-sergius.amvera.io/');
     })
   }
   catch (err) {
