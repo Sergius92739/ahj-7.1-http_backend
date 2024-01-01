@@ -5,7 +5,7 @@ const TicketController = require('./api/TicketController');
 const tickets = require('./api/tickets');
 const ticketCtlr = new TicketController(tickets);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 
 app.use(koaBody({
