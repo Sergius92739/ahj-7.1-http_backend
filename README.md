@@ -1,6 +1,6 @@
 ### HelpDesk
 
-#### Server: <a href="https://ahj-7-1-http-backend-sergius.amvera.io/">АМВЕРА</a>
+#### Server: <a href="https://ahj71.sergem.xyz/">Облачный сервер</a>
 
 #### Deployment: <a href="https://sergius92739.github.io/ahj-7.2-http_frontend/">Github Pages</a>
 
